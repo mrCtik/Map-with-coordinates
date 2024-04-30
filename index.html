@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Карта с координатами и диапазоном</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 800px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div>
+        <label for="coordinates">Введите координаты (широта, долгота):</label>
+        <input type="text" id="coordinates" placeholder="51.505, -0.09">
+        <button id="addMarker">Добавить маркер</button>
+    </div>
+    <div>
+        <label for="distance">Введите дальность (в метрах):</label>
+        <input type="number" id="distance" placeholder="1000">
+        <button id="drawRange">Отрисовать диапазон</button>
+    </div>
+    <div>
+        <label for="targetCoordinates">Координаты цели:</label>
+        <input type="text" id="targetCoordinates" placeholder="51.505, -0.09">
+        <button id="addTargetMarker">Добавить маркер цели</button>
+    </div>
+    <div>
+        <label for="receivedCoordinates">Полученные координаты цели:</label>
+        <input type="text" id="receivedCoordinates" placeholder="51.505, -0.09">
+        <button id="addReceivedMarker">Добавить маркер полученных координат</button>
+    </div>
+
+    <div>
+        <label for="marker1">Маркер 1:</label>
+        <select id="marker1">
+            <!-- Здесь будут добавлены опции для выбора маркера 1 -->
+        </select>
+        <label for="marker2">Маркер 2:</label>
+        <select id="marker2">
+            <!-- Здесь будут добавлены опции для выбора маркера 2 -->
+        </select>
+        <button id="measureDistance">Измерить расстояние</button>
+    </div>
+    <div class="result">
+        Расстояние (в метрах):
+        <span id="length"></span>
+    </div>
+    
+
+    
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
